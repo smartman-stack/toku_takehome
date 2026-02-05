@@ -1,5 +1,18 @@
+# Core ML/AI dependencies
 sentence-transformers>=2.2.0
 faiss-cpu>=1.7.0
+numpy>=1.21.0
+
+# Data handling
 pyyaml>=6.0
 pandas>=1.5.0
-numpy>=1.21.0
+
+# Optional: LLM providers (install if using LLM-based generation)
+openai>=1.0.0
+anthropic>=0.18.0
+
+# Optional: Cross-encoder reranking (highly recommended for better results)
+# Already included in sentence-transformers, but noting for clarity
+
+# Utilities
+python-dotenv>=1.0.0  # For .env file support
