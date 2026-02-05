@@ -1,0 +1,34 @@
+# TokuTel Internal Knowledge Base (Synthetic)
+# Last updated: 2025-09-15
+
+company:
+  name: "TokuTel"
+  region_focus: ["SG","MY","ID","TH","PH"]
+  pii_policy:
+    - "Never echo card numbers or national IDs back to customers."
+    - "Mask phone numbers except last 3 digits in transcripts."
+  escalation_policy:
+    p0: "Outage or data-loss risk — page on-call within 5 minutes."
+    p1: "Multiple customers blocked — escalate to Incident Manager within 30 minutes."
+    p2: "Single-customer degradation — open Jira and respond within 4 business hours."
+  sla:
+    standard_response_hours: 24
+    enterprise_response_hours: 4
+
+pricing_rules:
+  currency: "USD"
+  discounts:
+    - condition: "annual_prepay"
+      value_pct: 12
+    - condition: "nonprofit"
+      value_pct: 15
+  wa_api_quota_tiers:
+    t1: "1000 conv/day"
+    t2: "5000 conv/day"
+    t3: "20000 conv/day"
+
+features_matrix:
+  call_recording: ["MERANTI-cc-pro"]
+  sentiment_analysis: ["MERANTI-cc-pro"]
+  whatsapp_api: ["KAPOK-omni-Plus"]
+  sso: ["RAINTREE-uc"]

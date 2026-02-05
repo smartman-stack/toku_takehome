@@ -1,0 +1,4 @@
+Customer asks to enable call recording on CC Lite. Provide options.
+Customer exceeded WhatsApp quota; outline next steps.
+Customer wants SSO support; advise plan choice.
+Customer asks about nonprofit discount and annual prepay together.

@@ -1,0 +1,6 @@
+plan_id,name,region,minutes,sms,price_usd,notes
+KAPOK-voice-100,Kapok Voice 100,SG,100,50,9.9,Legacy plan; throttle after 100 min.
+KAPOK-omni-Plus,Kapok Omni Plus,SG,2000,1000,69.0,Includes WhatsApp Business API quota tier-1.
+MERANTI-cc-lite,Meranti CC Lite,MY,500,200,29.0,Contact-center lite; no call recording.
+MERANTI-cc-pro,Meranti CC Pro,MY,5000,5000,149.0,Includes sentiment analysis and call recording.
+RAINTREE-uc,Raintree UC,ID,1200,800,49.0,Unified comms; SSO optional.

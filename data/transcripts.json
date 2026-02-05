@@ -1,0 +1,23 @@
+[
+  {
+    "id": "t-001",
+    "channel": "voice",
+    "region": "SG",
+    "customer": "BrightMart SG",
+    "text": "Caller: Our agents can't see call recordings on Meranti CC Lite.\nAgent: CC Lite doesn't include call recording. Pro tier required."
+  },
+  {
+    "id": "t-002",
+    "channel": "chat",
+    "region": "MY",
+    "customer": "KayaRide",
+    "text": "User: We exceeded WhatsApp quota.\nAgent: Kapok Omni Plus includes tier-1 quota only. For higher tiers, contact sales for add-on."
+  },
+  {
+    "id": "t-003",
+    "channel": "voice",
+    "region": "ID",
+    "customer": "SateHub",
+    "text": "Caller: Do you support SSO on Raintree UC?\nAgent: Yes, optional SSO is available on Raintree UC plan."
+  }
+]
