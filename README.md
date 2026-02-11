@@ -119,7 +119,7 @@ python main.py --eval
 ### Programmatic Usage
 
 ```python
-from assistant import TokuTelAssistant, create_assistant
+from assistant import RAGAssistant, create_assistant
 
 # Create and initialize assistant
 assistant = create_assistant(use_llm=True, use_reranker=True)
@@ -180,8 +180,8 @@ Configuration can be set via environment variables:
 | `LLM_PROVIDER` | "openai", "anthropic", or "offline" | "openai" |
 | `LLM_MODEL` | Model name | "gpt-4o-mini" |
 | `USE_RERANKER` | Enable cross-encoder reranking | "true" |
-| `SEMANTIC_WEIGHT` | Weight for semantic search (0-1) | 0.7 |
-| `BM25_WEIGHT` | Weight for BM25 search (0-1) | 0.3 |
+| `SEMANTIC_WEIGHT` | Weight for semantic search (0-1) | 0.6 |
+| `BM25_WEIGHT` | Weight for BM25 search (0-1) | 0.4 |
 
 ## How It Works
 
@@ -205,6 +205,7 @@ Configuration can be set via environment variables:
 ### Key Algorithms
 
 - **Hybrid Search**: `final_score = 0.7 * semantic_score + 0.3 * bm25_score`
+- **Hybrid Search**: `final_score = 0.6 * semantic_score + 0.4 * bm25_score`
 - **Reranking**: Cross-encoder (ms-marco-MiniLM-L-6-v2) for precision
 - **Query Expansion**: Domain-specific synonyms (e.g., "SSO" → "single sign-on")
 

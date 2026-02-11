@@ -267,5 +267,9 @@ def create_assistant(use_llm: bool = True, use_reranker: bool = True) -> RAGAssi
     
     config.model.use_reranker = use_reranker
     
+    # Optimize hybrid search weights
+    config.retrieval.semantic_weight = 0.6
+    config.retrieval.bm25_weight = 0.4
+    
     assistant = RAGAssistant(config)
     return assistant
