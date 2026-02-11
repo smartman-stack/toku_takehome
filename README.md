@@ -1,6 +1,6 @@
 # TokuTel RAG Assistant
 
-A production-ready Retrieval-Augmented Generation (RAG) assistant for TokuTel customer support. The system answers customer questions accurately with inline citations and enforces company policies.
+A production-ready Retrieval-Augmented Generation (RAG) assistant for customer support. The system answers customer questions accurately with inline citations and enforces company policies.
 
 ## Features
 
@@ -262,10 +262,4 @@ pip install -r requirements.txt
 | Query (LLM) | ~1-2 seconds |
 | Memory | ~200MB |
 
-## License
 
-This is a take-home assignment for TokuTel AI Engineer position.
-
-## Contact
-
-For questions about this assignment, contact Haniyeh at Haniyeh.abdi@toku.co
