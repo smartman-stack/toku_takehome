@@ -1,8 +1,8 @@
-# TokuTel RAG Assistant - Architecture Document
+# RAG Assistant - Architecture Document
 
 ## Executive Summary
 
-This document describes the design, implementation, and trade-offs of the TokuTel Retrieval-Augmented Generation (RAG) assistant. The system answers customer questions accurately with traceable citations while enforcing company policies including PII masking, escalation levels, and SLA compliance.
+This document describes the design, implementation, and trade-offs of the Retrieval-Augmented Generation (RAG) assistant. The system answers customer questions accurately with traceable citations while enforcing company policies including PII masking, escalation levels, and SLA compliance.
 
 **Key Features:**
 - Hybrid search (semantic + BM25) with cross-encoder reranking

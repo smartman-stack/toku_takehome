@@ -10,9 +10,9 @@ from policy_enforcer import PolicyEnforcer
 from config import get_config, Config
 
 
-class TokuTelAssistant:
+class RAGAssistant:
     """
-    Retrieval-augmented assistant for TokuTel customer support.
+    Retrieval-augmented assistant for customer support.
     
     Features:
     - Hybrid search (semantic + BM25) with reranking
@@ -44,7 +44,7 @@ class TokuTelAssistant:
             return
         
         print("=" * 60)
-        print("Initializing TokuTel Assistant")
+        print("Initializing RAG Assistant")
         print("=" * 60)
         
         # Load all data sources
@@ -249,7 +249,7 @@ class TokuTelAssistant:
 
 
 # Convenience function for quick usage
-def create_assistant(use_llm: bool = True, use_reranker: bool = True) -> TokuTelAssistant:
+def create_assistant(use_llm: bool = True, use_reranker: bool = True) -> RAGAssistant:
     """
     Factory function to create assistant with common configurations.
     
@@ -258,7 +258,7 @@ def create_assistant(use_llm: bool = True, use_reranker: bool = True) -> TokuTel
         use_reranker: Whether to enable cross-encoder reranking
     
     Returns:
-        Configured TokuTelAssistant instance
+        Configured RAGAssistant instance
     """
     config = get_config()
     
@@ -267,5 +267,5 @@ def create_assistant(use_llm: bool = True, use_reranker: bool = True) -> TokuTel
     
     config.model.use_reranker = use_reranker
     
-    assistant = TokuTelAssistant(config)
+    assistant = RAGAssistant(config)
     return assistant

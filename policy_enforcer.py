@@ -113,9 +113,6 @@ class PolicyEnforcer:
         # Mask emails
         def mask_email(match):
             email = match.group(0)
-            # Don't mask company emails
-            if '@toku' in email.lower():
-                return email
             parts = email.split('@')
             if len(parts) == 2:
                 username = parts[0]

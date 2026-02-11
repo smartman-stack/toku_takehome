@@ -52,7 +52,7 @@ class AnswerGenerator:
     
     def _build_system_prompt(self) -> str:
         """Build the system prompt for the LLM."""
-        return """You are a helpful customer support assistant for TokuTel, a telecommunications company.
+        return """You are a helpful customer support assistant.
 
 IMPORTANT RULES:
 1. ONLY use information from the provided context. Do not make up information.
@@ -76,7 +76,7 @@ NEVER:
 
     def _generate_with_llm(self, query: str, context: str) -> str:
         """Generate answer using LLM."""
-        user_prompt = f"""Context from TokuTel knowledge base:
+        user_prompt = f"""Context from knowledge base:
 {context}
 
 Customer Question: {query}
@@ -260,7 +260,7 @@ Provide a helpful answer based ONLY on the context above. Include citations for 
                 step_num += 1
             
             # Add upgrade recommendation
-            result += f"Step {step_num}: Contact sales to upgrade quota tier or purchase add-on capacity\n"
+            result += f"Step {step_num}: To upgrade your quota tier or purchase add-on capacity, please follow the available upgrade options.\n"
             step_num += 1
         
         # Add remaining steps
@@ -294,7 +294,7 @@ Provide a helpful answer based ONLY on the context above. Include citations for 
         for condition, pct in discounts.items():
             result += f"• {condition.title()}: {pct}% discount\n"
         
-        result += "\nBoth discounts can typically be combined. Contact sales for exact pricing with multiple discounts applied."
+        result += "\nBoth discounts can typically be combined. Please check with the sales team for exact pricing with multiple discounts applied."
         
         return result.strip()
     
@@ -418,7 +418,7 @@ Provide a helpful answer based ONLY on the context above. Include citations for 
                     seen.add(section)
         
         if not facts:
-            return "I couldn't find specific information to answer your question. Please contact support for assistance."
+            return "I couldn't find specific information to answer your question. Please try rephrasing your query or check the available documentation."
         
         return "\n\n".join(facts[:3])
     

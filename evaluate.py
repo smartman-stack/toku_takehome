@@ -5,7 +5,7 @@ Produces structured JSON and human-readable outputs.
 import json
 from datetime import datetime
 from typing import List, Dict, Any
-from assistant import TokuTelAssistant
+from assistant import RAGAssistant
 from config import get_config
 
 
@@ -16,14 +16,14 @@ def load_eval_prompts(filepath: str = "data/eval_prompts.txt") -> List[str]:
     return prompts
 
 
-def evaluate(assistant: TokuTelAssistant = None, 
+def evaluate(assistant: RAGAssistant = None, 
              output_json: str = "evaluation_outputs.json",
              output_txt: str = "evaluation_outputs.txt") -> List[Dict[str, Any]]:
     """
     Run evaluation on all prompts and save results.
     
     Args:
-        assistant: TokuTelAssistant instance (creates new if None)
+        assistant: RAGAssistant instance (creates new if None)
         output_json: Path for JSON output
         output_txt: Path for human-readable output
     
@@ -32,8 +32,8 @@ def evaluate(assistant: TokuTelAssistant = None,
     """
     # Initialize assistant if not provided
     if assistant is None:
-        print("Initializing TokuTel Assistant for evaluation...")
-        assistant = TokuTelAssistant()
+        print("Initializing RAG Assistant for evaluation...")
+        assistant = RAGAssistant()
         assistant.initialize()
     
     # Load prompts
@@ -94,7 +94,7 @@ def evaluate(assistant: TokuTelAssistant = None,
     
     # Save human-readable output
     with open(output_txt, 'w', encoding='utf-8') as f:
-        f.write("TokuTel Assistant Evaluation Results\n")
+        f.write("RAG Assistant Evaluation Results\n")
         f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("=" * 60 + "\n\n")
         

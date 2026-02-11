@@ -1,5 +1,5 @@
 """
-Data loading and parsing module for TokuTel RAG system.
+Data loading and parsing module for RAG system.
 Handles loading and structuring all data sources with citation tracking.
 Implements intelligent chunking for optimal retrieval.
 """
