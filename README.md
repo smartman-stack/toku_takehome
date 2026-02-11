@@ -1,4 +1,4 @@
-# RAG Assistant
+# Toku - RAG Assistant
 
 A production-ready Retrieval-Augmented Generation (RAG) assistant for customer support. The system answers customer questions accurately with inline citations and enforces company policies.
 
